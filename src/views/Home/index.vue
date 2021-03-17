@@ -12,7 +12,7 @@
     <!--楼层-->
     <Floor />
     <!--楼层-->
-    <Floor />
+    <!-- <Floor /> -->
     <!--商标-->
     <Brand />
   </div>
@@ -26,6 +26,7 @@ import Like from "./Like";
 import ListContainer from "./ListContainer";
 import Rank from "./Rank";
 import TodayRecommend from "./TodayRecommend";
+
 export default {
   name: "Home",
   components: {
@@ -37,6 +38,9 @@ export default {
     Rank,
     TodayRecommend,
   },
+  computed: {
+    
+  }
 };
 </script>
 

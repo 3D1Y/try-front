@@ -1,30 +1,16 @@
 <template>
   <div class="floor">
-    <div class="py-container">
+    <div class="py-container" v-for="floorItem in floor" :key="floorItem.id">
       <div class="title clearfix">
-        <h3 class="fl">家用电器</h3>
+        <h3 class="fl">{{ floorItem.name }}</h3>
         <div class="fr">
           <ul class="nav-tabs clearfix">
-            <li class="active">
-              <a href="#tab1" data-toggle="tab">热门</a>
-            </li>
-            <li>
-              <a href="#tab2" data-toggle="tab">大家电</a>
-            </li>
-            <li>
-              <a href="#tab3" data-toggle="tab">生活电器</a>
-            </li>
-            <li>
-              <a href="#tab4" data-toggle="tab">厨房电器</a>
-            </li>
-            <li>
-              <a href="#tab5" data-toggle="tab">应季电器</a>
-            </li>
-            <li>
-              <a href="#tab6" data-toggle="tab">空气/净水</a>
-            </li>
-            <li>
-              <a href="#tab7" data-toggle="tab">高端电器</a>
+            <li
+              class="active"
+              v-for="(navWord, index) in floorItem.navList"
+              :key="index"
+            >
+              <a :href="navWord.url" data-toggle="tab">{{ navWord.text }}</a>
             </li>
           </ul>
         </div>
@@ -34,14 +20,11 @@
           <div class="floor-1">
             <div class="blockgary">
               <ul class="jd-list">
-                <li>节能补贴</li>
-                <li>4K电视</li>
-                <li>空气净化器</li>
-                <li>IH电饭煲</li>
-                <li>滚筒洗衣机</li>
-                <li>电热水器</li>
+                <li v-for="(keyWord, index) in floorItem.keywords" :key="index">
+                  {{ keyWord }}
+                </li>
               </ul>
-              <img src="./images/floor-1-1.png" />
+              <img :src="floorItem.imgUrl" />
             </div>
             <div class="floorBanner">
               <div class="swiper-container" id="floor1Swiper">
@@ -66,23 +49,25 @@
             </div>
             <div class="split">
               <span class="floor-x-line"></span>
-              <div class="floor-conver-pit">
-                <img src="./images/floor-1-2.png" />
-              </div>
-              <div class="floor-conver-pit">
-                <img src="./images/floor-1-3.png" />
+              <div
+                class="floor-conver-pit"
+                v-for="(imgL, index) in floorItem.recommendListL"
+                :key="index"
+              >
+                <img :src="imgL" />
               </div>
             </div>
             <div class="split center">
-              <img src="./images/floor-1-4.png" />
+              <img :src="floorItem.bigImg" />
             </div>
             <div class="split">
               <span class="floor-x-line"></span>
-              <div class="floor-conver-pit">
-                <img src="./images/floor-1-5.png" />
-              </div>
-              <div class="floor-conver-pit">
-                <img src="./images/floor-1-6.png" />
+              <div
+                class="floor-conver-pit"
+                v-for="(imgR, index) in floorItem.recommendListR"
+                :key="index"
+              >
+                <img :src="imgR" />
               </div>
             </div>
           </div>
@@ -93,8 +78,21 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 export default {
   name: "Floor",
+  computed: {
+    ...mapState({
+      floor: (state) => state.home.floor,
+    }),
+  },
+  methods: {
+    ...mapActions(["reqFloorDate"]),
+  },
+  async mounted() {
+    await this.reqFloorDate();
+    console.log(this.floor);
+  },
 };
 </script>
 

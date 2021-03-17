@@ -1,8 +1,8 @@
 <template>
   <!-- 商品分类导航 -->
   <div class="type-nav">
-    <div class="container">
-      <h2 class="all">全部商品分类</h2>
+    <div class="container" @mouseleave="leave">
+      <h2 class="all" @mouseenter="enter">全部商品分类</h2>
       <nav class="nav">
         <a href="###">服装城</a>
         <a href="###">美妆馆</a>
@@ -13,405 +13,122 @@
         <a href="###">有趣</a>
         <a href="###">秒杀</a>
       </nav>
-      <div class="sort">
-        <div class="all-sort-list2">
-          <div class="item bo">
-            <h3>
-              <a href="">图书、音像、数字商品</a>
-            </h3>
-            <div class="item-list clearfix">
-              <div class="subitem">
-                <dl class="fore">
-                  <dt>
-                    <a href="">电子书</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">婚恋/两性</a>
-                    </em>
-                    <em>
-                      <a href="">文学</a>
-                    </em>
-                    <em>
-                      <a href="">经管</a>
-                    </em>
-                    <em>
-                      <a href="">畅读VIP</a>
-                    </em>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <h3>
-              <a href="">家用电器</a>
-            </h3>
-            <div class="item-list clearfix">
-              <div class="subitem">
-                <dl class="fore">
-                  <dt>
-                    <a href="">电子书1</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">免费</a>
-                    </em>
-                    <em>
-                      <a href="">小说</a>
-                    </em>
-                    <em>
-                      <a href="">励志与成功</a>
-                    </em>
-                    <em>
-                      <a href="">婚恋/两性</a>
-                    </em>
-                    <em>
-                      <a href="">文学</a>
-                    </em>
-                    <em>
-                      <a href="">经管</a>
-                    </em>
-                    <em>
-                      <a href="">畅读VIP</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>
-                    <a href="">数字音乐</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">通俗流行</a>
-                    </em>
-                    <em>
-                      <a href="">古典音乐</a>
-                    </em>
-                    <em>
-                      <a href="">摇滚说唱</a>
-                    </em>
-                    <em>
-                      <a href="">爵士蓝调</a>
-                    </em>
-                    <em>
-                      <a href="">乡村民谣</a>
-                    </em>
-                    <em>
-                      <a href="">有声读物</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>
-                    <a href="">音像</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">音乐</a>
-                    </em>
-                    <em>
-                      <a href="">影视</a>
-                    </em>
-                    <em>
-                      <a href="">教育音像</a>
-                    </em>
-                    <em>
-                      <a href="">游戏</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>文艺</dt>
-                  <dd>
-                    <em>
-                      <a href="">小说</a>
-                    </em>
-                    <em>
-                      <a href="">文学</a>
-                    </em>
-                    <em>
-                      <a href="">青春文学</a>
-                    </em>
-                    <em>
-                      <a href="">传记</a>
-                    </em>
-                    <em>
-                      <a href="">艺术</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>人文社科</dt>
-                  <dd>
-                    <em>
-                      <a href="">历史</a>
-                    </em>
-                    <em>
-                      <a href="">心理学</a>
-                    </em>
-                    <em>
-                      <a href="">政治/军事</a>
-                    </em>
-                    <em>
-                      <a href="">国学/古籍</a>
-                    </em>
-                    <em>
-                      <a href="">哲学/宗教</a>
-                    </em>
-                    <em>
-                      <a href="">社会科学</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>经管励志</dt>
-                  <dd>
-                    <em>
-                      <a href="">经济</a>
-                    </em>
-                    <em>
-                      <a href="">金融与投资</a>
-                    </em>
-                    <em>
-                      <a href="">管理</a>
-                    </em>
-                    <em>
-                      <a href="">励志与成功</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>生活</dt>
-                  <dd>
-                    <em>
-                      <a href="">家庭与育儿</a>
-                    </em>
-                    <em>
-                      <a href="">旅游/地图</a>
-                    </em>
-                    <em>
-                      <a href="">烹饪/美食</a>
-                    </em>
-                    <em>
-                      <a href="">时尚/美妆</a>
-                    </em>
-                    <em>
-                      <a href="">家居</a>
-                    </em>
-                    <em>
-                      <a href="">婚恋与两性</a>
-                    </em>
-                    <em>
-                      <a href="">娱乐/休闲</a>
-                    </em>
-                    <em>
-                      <a href="">健身与保健</a>
-                    </em>
-                    <em>
-                      <a href="">动漫/幽默</a>
-                    </em>
-                    <em>
-                      <a href="">体育/运动</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>科技</dt>
-                  <dd>
-                    <em>
-                      <a href="">科普</a>
-                    </em>
-                    <em>
-                      <a href="">IT</a>
-                    </em>
-                    <em>
-                      <a href="">建筑</a>
-                    </em>
-                    <em>
-                      <a href="">医学</a>
-                    </em>
-                    <em>
-                      <a href="">工业技术</a>
-                    </em>
-                    <em>
-                      <a href="">电子/通信</a>
-                    </em>
-                    <em>
-                      <a href="">农林</a>
-                    </em>
-                    <em>
-                      <a href="">科学与自然</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>少儿</dt>
-                  <dd>
-                    <em>
-                      <a href="">少儿</a>
-                    </em>
-                    <em>
-                      <a href="">0-2岁</a>
-                    </em>
-                    <em>
-                      <a href="">3-6岁</a>
-                    </em>
-                    <em>
-                      <a href="">7-10岁</a>
-                    </em>
-                    <em>
-                      <a href="">11-14岁</a>
-                    </em>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <h3>
-              <a href="">手机、数码、充值</a>
-            </h3>
-            <div class="item-list clearfix">
-              <div class="subitem">
-                <dl class="fore">
-                  <dt>
-                    <a href="">充值</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="recharge.html">充值</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>
-                    <a href="">电子书2</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">免费</a>
-                    </em>
-                    <em>
-                      <a href="">小说</a>
-                    </em>
-                    <em>
-                      <a href="">励志与成功</a>
-                    </em>
-                    <em>
-                      <a href="">婚恋/两性</a>
-                    </em>
-                    <em>
-                      <a href="">文学</a>
-                    </em>
-                    <em>
-                      <a href="">经管</a>
-                    </em>
-                    <em>
-                      <a href="">畅读VIP</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>
-                    <a href="">数字音乐</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">通俗流行</a>
-                    </em>
-                    <em>
-                      <a href="">古典音乐</a>
-                    </em>
-                    <em>
-                      <a href="">摇滚说唱</a>
-                    </em>
-                    <em>
-                      <a href="">爵士蓝调</a>
-                    </em>
-                    <em>
-                      <a href="">乡村民谣</a>
-                    </em>
-                    <em>
-                      <a href="">有声读物</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>
-                    <a href="">音像</a>
-                  </dt>
-                  <dd>
-                    <em>
-                      <a href="">音乐</a>
-                    </em>
-                    <em>
-                      <a href="">影视</a>
-                    </em>
-                    <em>
-                      <a href="">教育音像</a>
-                    </em>
-                    <em>
-                      <a href="">游戏</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>文艺</dt>
-                  <dd>
-                    <em>
-                      <a href="">小说</a>
-                    </em>
-                    <em>
-                      <a href="">文学</a>
-                    </em>
-                    <em>
-                      <a href="">青春文学</a>
-                    </em>
-                    <em>
-                      <a href="">传记</a>
-                    </em>
-                    <em>
-                      <a href="">艺术</a>
-                    </em>
-                  </dd>
-                </dl>
-                <dl class="fore">
-                  <dt>人文社科</dt>
-                  <dd>
-                    <em>
-                      <a href="">历史</a>
-                    </em>
-                    <em>
-                      <a href="">心理学</a>
-                    </em>
-                    <em>
-                      <a href="">政治/军事</a>
-                    </em>
-                    <em>
-                      <a href="">国学/古籍</a>
-                    </em>
-                    <em>
-                      <a href="">哲学/宗教</a>
-                    </em>
-                    <em>
-                      <a href="">社会科学</a>
-                    </em>
-                  </dd>
-                </dl>
+      <transition name="search">
+        <div class="sort" v-show="isHomeShow || isSearchShow">
+          <div class="all-sort-list2">
+            <div
+              class="item bo"
+              v-for="subCategory in categoryData"
+              :key="subCategory.categoryId"
+            >
+              <h3>
+                <a
+                  @click="toSearch"
+                  :data-categoryName="`${subCategory.categoryName}`"
+                  :data-category1Id="`${subCategory.categoryId}`"
+                  >{{ subCategory.categoryName }}</a
+                >
+              </h3>
+              <div class="item-list clearfix">
+                <div class="subitem">
+                  <dl
+                    class="fore"
+                    v-for="sonCategory in subCategory.categoryChild"
+                    :key="sonCategory.categoryId"
+                  >
+                    <dt>
+                      <a
+                        @click="toSearch"
+                        :data-categoryName="`${sonCategory.categoryName}`"
+                        :data-category2Id="`${sonCategory.categoryId}`"
+                        >{{ sonCategory.categoryName }}</a
+                      >
+                    </dt>
+                    <dd>
+                      <em
+                        v-for="item in sonCategory.categoryChild"
+                        :key="item.categoryId"
+                      >
+                        <a
+                          @click="toSearch"
+                          :data-categoryName="`${item.categoryName}`"
+                          :data-category3Id="`${item.categoryId}`"
+                          >{{ item.categoryName }}</a
+                        >
+                      </em>
+                    </dd>
+                  </dl>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 export default {
-  name: 'TypeNav',
-}
+  name: "TypeNav",
+  data() {
+    return {
+      isHomeShow: this.$route.path === "/",
+      isSearchShow: false,
+    };
+  },
+  methods: {
+    ...mapActions(["getTypeNavCategoryData"]),
+    enter() {
+      this.isSearchShow = true;
+    },
+    leave() {
+      this.isSearchShow = false;
+    },
+    toSearch(e) {
+      const { categoryname } = e.target.dataset;
+      const query = {
+        categoryName: categoryname,
+      };
+      if (categoryname) {
+        if (e.target.dataset.category1id) {
+          const { category1id } = e.target.dataset;
+          query.category1Id = category1id;
+        }
+        if (e.target.dataset.category2id) {
+          const { category2id } = e.target.dataset;
+          query.category2Id = category2id;
+        }
+        if (e.target.dataset.category3id) {
+          const { category3id } = e.target.dataset;
+          query.category3Id = category3id;
+        }
+
+        const location = {
+          name: "search",
+          query,
+        };
+        if (this.$route.params.xxx) {
+          location.params = this.$route.params;
+        }
+        this.$router.push(location);
+      }
+      return;
+    },
+  },
+  computed: {
+    ...mapState({
+      categoryData: (state) => {
+        return state.home.categoryData;
+      },
+    }),
+  },
+  mounted() {
+    if (this.categoryData.lenght) return;
+    this.getTypeNavCategoryData();
+  },
+};
 </script>
 
 <style  lang="less" scoped>
@@ -454,7 +171,14 @@ export default {
       position: absolute;
       background: #fafafa;
       z-index: 999;
-
+      opacity: 1;
+      &.search-enter {
+        height: 0;
+      }
+      &.search-enter-active {
+        transition: 0.5s height;
+        overflow: hidden;
+      }
       .all-sort-list2 {
         .item {
           h3 {

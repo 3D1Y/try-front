@@ -1,0 +1,24 @@
+[{
+    "id|+1": 1,
+    "name": "@ctitle(4)",
+    "keywords|6": ["@ctitle(3,5)"],
+    "imgUrl": "@image('209x250','@color()','png')",
+    "navList|7": [{
+            "url": "#",
+            "text": "@ctitle(2,4)"
+        }
+    ],
+    "carouselList|3": [{
+            "id|+1": 1,
+            "imgUrl": "@image('329x360')"
+        }
+    ],
+    "recommendListL|2": [
+        "@image('219.55x180','@color()')"
+    ],
+    "recommendListR|2": [
+        "@image('219.55x180','@color()')"
+    ],
+    "bigImg": "@image('220x359','@color()')"
+}
+]
